@@ -1,155 +1,1377 @@
 <!DOCTYPE html>
-<!--
-  ================================================================
-  READ THIS BEFORE YOU PASTE ANYTHING
-
-  When Gemini gives you a page, you do NOT paste it into a part of
-  this file. You replace the entire file.
-
-  Click into the editor, press Ctrl+A (Cmd+A on Mac), press Delete,
-  then paste. Everything here is meant to be thrown away.
-
-  Do that only AFTER your live link works. Get the link first.
-  ================================================================
--->
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My first site</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0d1d30;
-    --card: #142a44;
-    --line: #27466a;
-    --aqua: #6de1d7;
-    --text: #ffffff;
-    --muted: #94a9bf;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--navy);
-    color: var(--text);
-    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    padding: 6vh 20px;
-  }
-  main { width: 100%; max-width: 640px; }
-  .badge {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--aqua);
-    margin-bottom: 18px;
-  }
-  h1 {
-    font-family: "Unbounded", "Manrope", sans-serif;
-    font-weight: 800;
-    font-size: clamp(38px, 9vw, 68px);
-    letter-spacing: -0.05em;
-    line-height: 1.02;
-    margin: 0 0 8px;
-  }
-  .name {
-    font-family: "Unbounded", "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: clamp(18px, 4vw, 24px);
-    letter-spacing: -0.04em;
-    color: var(--aqua);
-    margin: 0 0 24px;
-  }
-  p.lead { font-size: 18px; color: var(--muted); margin: 0 0 34px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 26px 28px;
-    margin-bottom: 18px;
-  }
-  .card h2 {
-    font-family: "Unbounded", "Manrope", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: var(--aqua);
-    margin: 0 0 16px;
-  }
-  ol { margin: 0; padding-left: 20px; }
-  li { margin-bottom: 12px; color: var(--muted); }
-  li:last-child { margin-bottom: 0; }
-  li b { color: var(--text); font-weight: 700; }
-  code {
-    font-family: ui-monospace, "SF Mono", Consolas, monospace;
-    font-size: 0.92em;
-    background: #0a1727;
-    border: 1px solid var(--line);
-    border-radius: 5px;
-    padding: 1px 6px;
-    color: var(--aqua);
-  }
-  a { color: var(--aqua); }
-  footer {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #6e839a;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDER-HACK 2026 // Vibe The Multiverse</title>
+    <!-- Single Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --spider-red: #ff003c;
+            --spider-red-glow: rgba(255, 0, 60, 0.6);
+            --spider-blue: #00f0ff;
+            --spider-blue-glow: rgba(0, 240, 255, 0.5);
+            --suit-dark: #0a0b10;
+            --suit-card: #121420;
+            --suit-border: #22263d;
+            --spider-yellow: #ffe600;
+            --text-main: #f0f4f8;
+            --text-muted: #8a99ad;
+            --font-main: 'Orbitron', -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--suit-dark);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.5;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(18, 20, 32, 0.8) 0%, rgba(10, 11, 16, 1) 100%),
+                linear-gradient(rgba(255, 0, 60, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 60, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--suit-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--spider-red);
+            border-radius: 4px;
+        }
+
+        /* Canvas Particle Background */
+        #web-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.65;
+        }
+
+        /* Spider-Sense Overlay */
+        #spider-sense-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+            box-shadow: inset 0 0 100px var(--spider-red-glow);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .spider-sense-active #spider-sense-overlay {
+            opacity: 1;
+            animation: pulseSense 0.4s infinite alternate;
+        }
+
+        @keyframes pulseSense {
+            0% { box-shadow: inset 0 0 60px var(--spider-red-glow), inset 0 0 120px rgba(255, 230, 0, 0.4); }
+            100% { box-shadow: inset 0 0 120px var(--spider-red), inset 0 0 200px rgba(0, 240, 255, 0.6); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            background: rgba(10, 11, 16, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--suit-border);
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            fill: var(--spider-red);
+            filter: drop-shadow(0 0 8px var(--spider-red));
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(10deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--spider-blue);
+            text-shadow: 0 0 10px var(--spider-blue-glow);
+        }
+
+        .btn-spider-sense {
+            background: rgba(255, 0, 60, 0.1);
+            border: 1px solid var(--spider-red);
+            color: var(--spider-red);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 60, 0.2);
+        }
+
+        .btn-spider-sense:hover {
+            background: var(--spider-red);
+            color: #fff;
+            box-shadow: 0 0 20px var(--spider-red-glow);
+            transform: translateY(-2px);
+        }
+
+        /* Container Layout */
+        main {
+            position: relative;
+            z-index: 1;
+            padding-top: 80px;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero-badge {
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid var(--spider-blue);
+            color: var(--spider-blue);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 30%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title span {
+            color: var(--spider-red);
+            -webkit-text-fill-color: var(--spider-red);
+            text-shadow: 0 0 25px var(--spider-red-glow);
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--spider-red);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 25px var(--spider-red-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 0 35px var(--spider-red);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--spider-blue);
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--spider-blue);
+            border-radius: 4px;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 240, 255, 0.1);
+            box-shadow: 0 0 25px var(--spider-blue-glow);
+            transform: translateY(-4px);
+        }
+
+        /* Countdown Timer */
+        .timer-container {
+            margin-top: 3.5rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .timer-box {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            min-width: 90px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .timer-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--spider-red);
+        }
+
+        .timer-val {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .timer-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 0.4rem;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-tag {
+            color: var(--spider-blue);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Multiverse Categories Grid */
+        .grid-tracks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .track-card {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .track-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, var(--spider-red-glow) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .track-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--spider-red);
+            box-shadow: 0 10px 30px rgba(255, 0, 60, 0.2);
+        }
+
+        .track-card:hover::before {
+            opacity: 0.2;
+        }
+
+        .track-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 0, 60, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--spider-red);
+        }
+
+        .track-card:nth-child(2) .track-icon {
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--spider-blue);
+        }
+
+        .track-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+
+        .track-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .track-prize {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--spider-yellow);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Interactive Cyber Prompt Generator Section */
+        .prompt-simulator {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--suit-border);
+            margin-bottom: 1.5rem;
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-title {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .prompt-output {
+            background: rgba(10, 11, 16, 0.9);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 6px;
+            padding: 1.5rem;
+            min-height: 120px;
+            font-family: monospace;
+            font-size: 1rem;
+            color: var(--spider-blue);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .prompt-text {
+            line-height: 1.6;
+        }
+
+        .prompt-btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Live Leaderboard */
+        .leaderboard-controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            color: #fff;
+            padding: 0.75rem 1.2rem;
+            border-radius: 6px;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            width: 280px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--spider-blue);
+            box-shadow: 0 0 10px var(--spider-blue-glow);
+        }
+
+        .filter-btn {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            color: var(--text-muted);
+            padding: 0.75rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--font-main);
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: var(--spider-red);
+            border-color: var(--spider-red);
+            background: rgba(255, 0, 60, 0.1);
+        }
+
+        .table-wrapper {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--suit-border);
+        }
+
+        td {
+            padding: 1.2rem;
+            border-bottom: 1px solid var(--suit-border);
+            font-size: 0.9rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .rank {
+            font-weight: 900;
+            width: 60px;
+        }
+
+        .rank-1 { color: var(--spider-yellow); text-shadow: 0 0 10px rgba(255,230,0,0.5); }
+        .rank-2 { color: #d1d5db; }
+        .rank-3 { color: #b45309; }
+
+        .dev-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--spider-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: #fff;
+            box-shadow: 0 0 8px var(--spider-red-glow);
+        }
+
+        .tag-universe {
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--spider-blue);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+        }
+
+        /* Registration Form */
+        .registration-card {
+            background: var(--suit-card);
+            border: 1px solid var(--suit-border);
+            border-radius: 12px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        input, select, textarea {
+            background: rgba(10, 11, 16, 0.8);
+            border: 1px solid var(--suit-border);
+            color: #fff;
+            padding: 0.9rem 1.2rem;
+            border-radius: 6px;
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--spider-red);
+            box-shadow: 0 0 12px var(--spider-red-glow);
+        }
+
+        /* Success Overlay Modal */
+        .modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(10, 11, 16, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            background: var(--suit-card);
+            border: 2px solid var(--spider-red);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 50px var(--spider-red-glow);
+            transform: scale(0.8);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--suit-border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: rgba(10, 11, 16, 0.95);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            .nav-links {
+                display: none; /* Mobile menu can be simplified */
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full {
+                grid-column: span 1;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-<main>
 
-  <span class="badge">Cal Poly Vibe Coding &middot; Session 01</span>
+    <!-- Spider Particle Canvas -->
+    <canvas id="web-canvas"></canvas>
 
-  <h1>It&rsquo;s live.</h1>
+    <!-- Visual Spider-Sense Effect Overlay -->
+    <div id="spider-sense-overlay"></div>
 
-  <!-- Step 5: change the name below to yours, then commit. -->
-  <p class="name">Built by YOUR NAME HERE</p>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z"/>
+            </svg>
+            SPIDER-HACK
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about" class="active">Overview</a></li>
+            <li><a href="#tracks">Multiverse Tracks</a></li>
+            <li><a href="#prompts">Vibe Generator</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+        <button class="btn-spider-sense" id="spider-sense-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            SPIDER-SENSE
+        </button>
+    </nav>
 
-  <p class="lead">
-    This page is on the internet. Anyone you send this link to can open it,
-    on any device, right now. You made that happen in about five minutes.
-  </p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-badge">⚡ Global Cyber Web Event // Oct 2026</div>
+            <h1 class="hero-title">Vibe The <span>Multiverse</span></h1>
+            <p class="hero-subtitle">
+                With great prompt engineering comes great responsibility. Join 5,000+ Spider-Devs across dimensions to build, vibe code, and deploy AI-driven web apps in 48 hours.
+            </p>
+            <div class="hero-buttons">
+                <a href="#register" class="btn-primary">Register Spider-Dev</a>
+                <a href="#prompts" class="btn-secondary">Test Vibe Prompts</a>
+            </div>
 
-  <div class="card">
-    <h2>Three things, in this order</h2>
-    <ol>
-      <li><b>Put your name on it.</b> Edit <code>index.html</code>, change
-        YOUR NAME HERE above, commit, refresh this page.</li>
-      <li><b>Submit this link.</b> Go to
-        <a href="https://www.calpolyvibecoding.com/">calpolyvibecoding.com</a>,
-        make an account, and paste this URL in. That is how you get counted,
-        and how Claude seats get assigned.</li>
-      <li><b>Then build.</b> Open Gemini, get a page, and replace this entire
-        file with it.</li>
-    </ol>
-  </div>
+            <!-- Event Countdown -->
+            <div class="timer-container">
+                <div class="timer-box">
+                    <div class="timer-val" id="days">08</div>
+                    <div class="timer-label">Days</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-val" id="hours">14</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-val" id="minutes">32</div>
+                    <div class="timer-label">Mins</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-val" id="seconds">45</div>
+                    <div class="timer-label">Secs</div>
+                </div>
+            </div>
+        </section>
 
-  <div class="card">
-    <h2>How to replace this page</h2>
-    <ol>
-      <li>Copy what Gemini gives you with the <b>copy button</b> on the code
-        block. Do not click and drag.</li>
-      <li>Open <code>index.html</code> here and click the pencil icon.</li>
-      <li><b>Ctrl+A</b> (<b>Cmd+A</b> on Mac), then <b>Delete</b>. All of it.
-        Yes, really.</li>
-      <li>Paste, commit, refresh.</li>
-    </ol>
-  </div>
+        <!-- Multiverse Categories / Tracks -->
+        <section class="section-container" id="tracks">
+            <div class="section-header">
+                <span class="section-tag">Choose Your Suit</span>
+                <h2 class="section-title">Multiverse Categories</h2>
+            </div>
 
-  <footer>
-    Nothing on this page is precious. It exists so the link has something to
-    show before you have something of your own.
-  </footer>
+            <div class="grid-tracks">
+                <div class="track-card">
+                    <div class="track-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="track-title">Peter's Web Defense</h3>
+                    <p class="track-desc">Build web security, AI anomaly detection, and anti-glitch safeguards for spider-networks.</p>
+                    <div class="track-prize">🏆 $15,000 Bounty</div>
+                </div>
 
-</main>
+                <div class="track-card">
+                    <div class="track-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="track-title">Gwen's Audio Synth</h3>
+                    <p class="track-desc">Design audio-visual vibe apps, web-synthesizers, and music generators that react to code state.</p>
+                    <div class="track-prize">🏆 $12,500 Bounty</div>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3 class="track-title">2099 Cyber-Suite</h3>
+                    <p class="track-desc">Build high-frequency holographic UI tools, futuristic HUDs, and web-shooter simulations.</p>
+                    <div class="track-prize">🏆 $15,000 Bounty</div>
+                </div>
+
+                <div class="track-card">
+                    <div class="track-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+                    </div>
+                    <h3 class="track-title">Punk Anarchy Jam</h3>
+                    <p class="track-desc">No rules vibe coding. Build chaotic, high-contrast, glitch-art web experiences that defy convention.</p>
+                    <div class="track-prize">🏆 $10,000 Bounty</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Vibe Prompt Generator -->
+        <section class="section-container" id="prompts">
+            <div class="section-header">
+                <span class="section-tag">Practice Your Prompts</span>
+                <h2 class="section-title">Spider-Vibe Challenge Simulator</h2>
+            </div>
+
+            <div class="prompt-simulator">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot dot-red"></div>
+                        <div class="dot dot-yellow"></div>
+                        <div class="dot dot-green"></div>
+                    </div>
+                    <div class="terminal-title">SPIDER-AI_PROMPT_ENGINE.EXE</div>
+                </div>
+
+                <div class="prompt-output">
+                    <div class="prompt-text" id="prompt-display">
+                        Click "Generate Challenge Prompt" to receive your real-time Spider-Verse vibe coding prompt...
+                    </div>
+                </div>
+
+                <div class="prompt-btn-group">
+                    <button class="btn-primary" id="gen-prompt-btn">Generate Challenge Prompt</button>
+                    <button class="btn-secondary" id="copy-prompt-btn">Copy To Clipboard</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Leaderboard -->
+        <section class="section-container" id="leaderboard">
+            <div class="section-header">
+                <span class="section-tag">Multiverse Rankings</span>
+                <h2 class="section-title">Current Leaderboard</h2>
+            </div>
+
+            <div class="leaderboard-controls">
+                <input type="text" id="search-leaderboard" class="search-input" placeholder="Search Spider-Dev or Alias...">
+                <div style="display: flex; gap: 8px;">
+                    <button class="filter-btn active" data-filter="all">All Earths</button>
+                    <button class="filter-btn" data-filter="E-616">Earth-616</button>
+                    <button class="filter-btn" data-filter="E-65">Earth-65</button>
+                    <button class="filter-btn" data-filter="E-2099">Earth-2099</button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Spider-Dev</th>
+                            <th>Dimension</th>
+                            <th>Vibe Score</th>
+                            <th>Web Apps</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section class="section-container" id="register">
+            <div class="section-header">
+                <span class="section-tag">Join The Web</span>
+                <h2 class="section-title">Register Spider-Dev</h2>
+            </div>
+
+            <div class="registration-card">
+                <form id="spider-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="alias">Spider Alias</label>
+                            <input type="text" id="alias" placeholder="e.g. WebSlinger_99" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="earth">Home Earth Dimension</label>
+                            <select id="earth" required>
+                                <option value="Earth-616">Earth-616 (Original)</option>
+                                <option value="Earth-65">Earth-65 (Spider-Gwen)</option>
+                                <option value="Earth-1610">Earth-1610 (Miles Morales)</option>
+                                <option value="Earth-2099">Earth-2099 (Miguel O'Hara)</option>
+                                <option value="Earth-138">Earth-138 (Spider-Punk)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Sub-Space Signal (Email)</label>
+                            <input type="email" id="email" placeholder="peter@oscorp-labs.io" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="track">Primary Track</label>
+                            <select id="track" required>
+                                <option value="defense">Peter's Web Defense</option>
+                                <option value="audio">Gwen's Audio Synth</option>
+                                <option value="cyber">2099 Cyber-Suite</option>
+                                <option value="punk">Punk Anarchy Jam</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="stack">Favorite Vibe Stack / LLM Tools</label>
+                            <textarea id="stack" rows="3" placeholder="List your AI models, prompt techniques, audio FX tools..." required></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <button type="submit" class="btn-primary" style="width: 100%;">Web-Shoot My Registration 🕸️</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Confirmation Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <svg style="width: 60px; height: 60px; fill: var(--spider-red); margin-bottom: 1rem;" viewBox="0 0 24 24">
+                <path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z"/>
+            </svg>
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; text-transform: uppercase;">You're In The Web!</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;" id="modal-msg">
+                Your Spider-Alias has been logged into the Multiverse mainframe. Check your sub-space signal for access codes.
+            </p>
+            <button class="btn-primary" id="modal-close">Close Terminal</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 SPIDER-HACK MULTIVERSE. Built for Spider-Devs everywhere.</p>
+        <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.6;">Remember: With great prompt engineering comes great responsibility.</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        /* --- Audio Synthesizer (Web Audio API) for Spider-Sense & Actions --- */
+        class AudioFX {
+            constructor() {
+                this.ctx = null;
+            }
+
+            init() {
+                if (!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+            }
+
+            playSpiderSense() {
+                this.init();
+                if (this.ctx.state === 'suspended') this.ctx.resume();
+
+                const now = this.ctx.currentTime;
+                // High frequency alert sweep
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.exponentialRampToValueAtTime(1600, now + 0.15);
+                osc.frequency.exponentialRampToValueAtTime(600, now + 0.3);
+
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.35);
+            }
+
+            playWebThwip() {
+                this.init();
+                if (this.ctx.state === 'suspended') this.ctx.resume();
+
+                const now = this.ctx.currentTime;
+                // White noise burst simulating web shooter sound
+                const bufferSize = this.ctx.sampleRate * 0.15;
+                const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = buffer;
+
+                const filter = this.ctx.createBiquadFilter();
+                filter.type = 'bandpass';
+                filter.frequency.setValueAtTime(3000, now);
+                filter.frequency.exponentialRampToValueAtTime(400, now + 0.15);
+
+                const gain = this.ctx.createGain();
+                gain.gain.setValueAtTime(0.3, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+
+                noise.connect(filter);
+                filter.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                noise.start(now);
+            }
+        }
+
+        const audio = new AudioFX();
+
+        /* --- Interactive Web Canvas Particle Background --- */
+        const canvas = document.getElementById('web-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let particles = [];
+        const mouse = { x: null, y: null, radius: 180 };
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initParticles();
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 1.2;
+                this.vy = (Math.random() - 0.5) * 1.2;
+                this.radius = Math.random() * 2 + 1;
+                this.color = Math.random() > 0.3 ? '#ff003c' : '#00f0ff';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.floor((width * height) / 12000);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Update & Draw Particles
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                // Connect nearby points to form Spider Web lines
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 110) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(255, 0, 60, ${1 - dist / 110})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+
+                // Connect to Mouse Cursor
+                if (mouse.x && mouse.y) {
+                    const dx = particles[i].x - mouse.x;
+                    const dy = particles[i].y - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < mouse.radius) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${1 - dist / mouse.radius})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animateCanvas);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        resizeCanvas();
+        animateCanvas();
+
+        /* --- Spider-Sense Trigger Button --- */
+        const spiderSenseBtn = document.getElementById('spider-sense-btn');
+        spiderSenseBtn.addEventListener('click', () => {
+            document.body.classList.add('spider-sense-active');
+            audio.playSpiderSense();
+
+            setTimeout(() => {
+                document.body.classList.remove('spider-sense-active');
+            }, 1200);
+        });
+
+        /* --- Countdown Timer --- */
+        function updateTimer() {
+            const eventDate = new Date();
+            eventDate.setDate(eventDate.getDate() + 8);
+
+            const now = new Date();
+            const diff = eventDate - now;
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / 1000 / 60) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = String(d).padStart(2, '0');
+            document.getElementById('hours').innerText = String(h).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(s).padStart(2, '0');
+        }
+        setInterval(updateTimer, 1000);
+
+        /* --- Spider-Vibe Challenge Generator --- */
+        const prompts = [
+            "🕸️ 'Build a web-shooter HUD in HTML Canvas that tracks mouse movements and calculates webbing trajectory in 30 seconds.'",
+            "⚡ 'Design a Spider-Gwen audio reactive web page that transforms CSS variables according to microphone input frequency.'",
+            "🕷️ 'Prompt an AI to write a WebGL Spider-Man suit visualizer with custom shader glowing web patterns.'",
+            "🤖 'Develop a Miguel O'Hara Spider-2099 AI assistant interface that detects code bugs and glitches with neon alert effects.'",
+            "🎸 'Create a Hobie Brown Spider-Punk chaotic web portfolio with dynamic canvas collage & SVG distortion filters.'"
+        ];
+
+        const genBtn = document.getElementById('gen-prompt-btn');
+        const copyBtn = document.getElementById('copy-prompt-btn');
+        const promptDisplay = document.getElementById('prompt-display');
+
+        genBtn.addEventListener('click', () => {
+            audio.playWebThwip();
+            const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+            
+            // Typewriter effect
+            promptDisplay.innerText = '';
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i < randomPrompt.length) {
+                    promptDisplay.innerText += randomPrompt.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 15);
+        });
+
+        copyBtn.addEventListener('click', () => {
+            audio.playWebThwip();
+            const textToCopy = promptDisplay.innerText;
+            
+            // Fallback clipboard method as per requirements
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            const origText = copyBtn.innerText;
+            copyBtn.innerText = "COPIED TO WEB! 🕸️";
+            setTimeout(() => copyBtn.innerText = origText, 2000);
+        });
+
+        /* --- Leaderboard Data & Filter Logic --- */
+        const leaderboardData = [
+            { rank: 1, name: "Miles Morales", alias: "Kid Arachnid", universe: "Earth-1610", score: "9,980", apps: 14 },
+            { rank: 2, name: "Gwen Stacy", alias: "Ghost-Spider", universe: "Earth-65", score: "9,850", apps: 12 },
+            { rank: 3, name: "Peter Parker", alias: "Spider-Man", universe: "Earth-616", score: "9,720", apps: 18 },
+            { rank: 4, name: "Miguel O'Hara", alias: "Spider-2099", universe: "Earth-2099", score: "9,640", apps: 10 },
+            { rank: 5, name: "Hobie Brown", alias: "Spider-Punk", universe: "Earth-138", score: "9,510", apps: 9 },
+            { rank: 6, name: "Pavitr Prabhakar", alias: "Spider-India", universe: "Earth-50101", score: "9,420", apps: 11 }
+        ];
+
+        function renderLeaderboard(data) {
+            const tbody = document.getElementById('leaderboard-body');
+            tbody.innerHTML = '';
+
+            data.forEach((item) => {
+                const tr = document.createElement('tr');
+                let rankClass = '';
+                if (item.rank === 1) rankClass = 'rank-1';
+                else if (item.rank === 2) rankClass = 'rank-2';
+                else if (item.rank === 3) rankClass = 'rank-3';
+
+                tr.innerHTML = `
+                    <td class="rank ${rankClass}">#${item.rank}</td>
+                    <td>
+                        <div class="dev-badge">
+                            <div class="avatar">${item.name.charAt(0)}</div>
+                            <div>
+                                <div>${item.name}</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">@${item.alias}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><span class="tag-universe">${item.universe}</span></td>
+                    <td style="font-weight: 800; color: var(--spider-blue);">${item.score}</td>
+                    <td>${item.apps} Built</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        renderLeaderboard(leaderboardData);
+
+        // Search & Filter Listeners
+        const searchInput = document.getElementById('search-leaderboard');
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = leaderboardData.filter(d => 
+                d.name.toLowerCase().includes(query) || d.alias.toLowerCase().includes(query)
+            );
+            renderLeaderboard(filtered);
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                audio.playWebThwip();
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const universe = btn.getAttribute('data-filter');
+                if (universe === 'all') {
+                    renderLeaderboard(leaderboardData);
+                } else {
+                    const filtered = leaderboardData.filter(d => d.universe === universe);
+                    renderLeaderboard(filtered);
+                }
+            });
+        });
+
+        /* --- Registration Form & Modal --- */
+        const form = document.getElementById('spider-form');
+        const modal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalMsg = document.getElementById('modal-msg');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            audio.playWebThwip();
+
+            const alias = document.getElementById('alias').value;
+            const earth = document.getElementById('earth').value;
+
+            modalMsg.innerText = `Spider-Dev "${alias}" from ${earth} has been successfully registered into the Multiverse network!`;
+            modal.classList.add('active');
+            form.reset();
+        });
+
+        modalClose.addEventListener('click', () => {
+            audio.playWebThwip();
+            modal.classList.remove('active');
+        });
+
+        // Play subtle sound on all primary button clicks
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+            btn.addEventListener('click', () => audio.playWebThwip());
+        });
+    </script>
 </body>
 </html>
